@@ -20,10 +20,10 @@ import utfpr.faces.support.PageBean;
 public class LoginBean extends PageBean{
     private String usuario;
     private String senha;
-    private String Administrador;
+    private Boolean Administrador;
 
     public LoginBean() {
-        Administrador = "";
+        Administrador = false;
     }
 
     public String getUsuario() {
@@ -42,18 +42,18 @@ public class LoginBean extends PageBean{
         this.senha = senha;
     }
 
-    public String getAdministrador() {
+    public Boolean getAdministrador() {
         return Administrador;
     }
 
-    public void setAdministrador(String Administrador) {
+    public void setAdministrador(Boolean Administrador) {
         this.Administrador = Administrador;
     }
     
     public String confirmaAction() {
         if(usuario.equals(senha)){
             
-            if(Administrador.equals("true")){
+            if(Administrador){
                 Logins l =new Logins();
                 l.setData(new Date());
                 l.setNome(usuario);

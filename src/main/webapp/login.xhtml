@@ -30,7 +30,7 @@
             </h:panelGroup>
             <h:panelGroup styleClass="form-block" layout="block">
                 <h:selectBooleanCheckbox id="opadmin"/>
-                <h:outputText id="Administrador" value="true"/>
+                <h:outputText id="Administrador" value="#{loginBean.administrador}"/>
             </h:panelGroup>
             <h:commandButton value="Entrar" action="#{loginBean.confirmaAction}"/>
             <h:messages/>
