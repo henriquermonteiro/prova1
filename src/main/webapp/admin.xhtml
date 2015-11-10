@@ -18,6 +18,24 @@
     <ui:define name="content">
         <h:form>
             <div class="titulo-form">ADMINISTRADOR</div>
+            <h:dataTable id="cadastro"
+                         summary="Cesta de compras"
+                         value="#{adminBean.logins}"
+                         border="1"
+                         var="logins">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="CPF" />
+                    </f:facet>
+                    <h:outputText value="#{logins.nome}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome"/>
+                    </f:facet>
+                    <h:outputText value="#{logins.data}" />
+                </h:column>
+            </h:dataTable>
         </h:form>
     </ui:define>
 
